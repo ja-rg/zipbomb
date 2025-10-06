@@ -1,0 +1,44 @@
+# Entornos virtuales
+.venv/
+env/
+venv/
+*.env
+
+# Archivos temporales y de trabajo
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Resultados experimentales
+work/
+samples/
+results.csv
+*.zip
+*.gz
+*.bz2
+*.xz
+*.zst
+*.br
+*.lz4
+
+# Configuración y cachés
+config.json~
+*.DS_Store
+.cache/
+.idea/
+.vscode/
+
+# Archivos de sistema y backups
+*.out
+*.old
+*.orig
+*.retry
+*~
+
+# Compilaciones o binarios
+dist/
+build/
+*.egg-info/

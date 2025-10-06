@@ -1,0 +1,13 @@
+{
+  "algorithms": [
+    {"name":"gzip","compress_cmd":"gzip -k -{level} \"{infile}\"","decompress_cmd":"gzip -d -c \"{infile}.gz\" > \"{outfile}\"","extensions":[".gz"],"levels":[1,6,9]},
+    {"name":"bzip2","compress_cmd":"bzip2 -k -{level} \"{infile}\"","decompress_cmd":"bzip2 -d -c \"{infile}.bz2\" > \"{outfile}\"","extensions":[".bz2"],"levels":[1,9]},
+    {"name":"xz","compress_cmd":"xz -k -{level} \"{infile}\"","decompress_cmd":"xz -d -c \"{infile}.xz\" > \"{outfile}\"","extensions":[".xz"],"levels":[0,6,9]},
+    {"name":"zstd","compress_cmd":"zstd -q -{level} -k \"{infile}\"","decompress_cmd":"unzstd -q -c \"{infile}.zst\" > \"{outfile}\"","extensions":[".zst"],"levels":[1,5,19]},
+    {"name":"brotli","compress_cmd":"brotli -q {level} -k \"{infile}\"","decompress_cmd":"brotli -d -c \"{infile}.br\" > \"{outfile}\"","extensions":[".br"],"levels":[1,6,11]},
+    {"name":"lz4","compress_cmd":"lz4 -q -{level} \"{infile}\" \"{infile}.lz4\"","decompress_cmd":"lz4 -d -q \"{infile}.lz4\" \"{outfile}\"","extensions":[".lz4"],"levels":[1,9]},
+    {"name":"zip_deflate","compress_cmd":"zip -q -{level} \"{infile}.zip\" \"{infile}\"","decompress_cmd":"unzip -p \"{infile}.zip\" > \"{outfile}\"","extensions":[".zip"],"levels":[0,6,9]}
+  ],
+  "timeout_seconds": 300,
+  "sample_interval_seconds": 0.1
+}
